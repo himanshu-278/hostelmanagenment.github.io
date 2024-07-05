@@ -1,0 +1,61 @@
+Project Description: Hostel Management System
+This project is a C++ application designed to manage hostel bed reservations using a MySQL database. The application allows hostel administrators to interact with the system through a command-line interface, providing functionalities such as inserting hostel data, reserving beds for students, and checking the availability of beds.
+
+Key Features:
+Database Connectivity:
+
+Establishes a connection to a MySQL database using credentials specified in the code (host, user, password, and database name).
+Ensures error handling by displaying relevant error messages if the connection fails.
+Hostel Class:
+
+Represents a hostel with attributes such as Name, Bed (number of beds), and Fee (cost per bed).
+Provides constructors for initializing these attributes and getter methods to retrieve their values.
+Data Insertion:
+
+Inserts a new hostel record into the database with predefined values for Name, Bed, and Fee.
+Converts integer values to strings for the insertion query.
+Displays success or error messages based on the outcome of the insertion operation.
+User Interaction:
+
+Presents a main menu with options to reserve a bed or exit the application.
+Uses a loop to keep displaying the menu until the user decides to exit.
+Clears the screen at the beginning of each loop iteration to provide a clean interface.
+Bed Reservation:
+
+Prompts the user to enter a student's name for reserving a bed.
+Checks the current number of available beds in the specified hostel.
+If beds are available, decreases the bed count by one and updates the database.
+Displays a success message along with the fee amount.
+If no beds are available, informs the user that no beds are currently available.
+Exit Option:
+
+Allows the user to exit the application, displaying a farewell message before terminating the program.
+Error Handling:
+
+Handles errors related to database connectivity, SQL queries, and invalid user inputs.
+Ensures that appropriate error messages are displayed to the user for better understanding and debugging.
+Workflow:
+Database Connection:
+
+The application initializes a MySQL connection and attempts to connect to the specified database.
+If the connection is successful, it logs into the database and proceeds with further operations.
+Hostel Record Insertion:
+
+Creates a Hostel object with predefined attributes.
+Constructs an SQL INSERT query to add the hostel data to the database.
+Executes the query and handles any errors that may occur.
+Main Menu Display:
+
+Continuously displays a menu with options to reserve a bed or exit.
+Processes user input to navigate through the menu options.
+Bed Reservation Process:
+
+Upon selecting the reservation option, the application prompts the user for the student's name.
+Checks the availability of beds by querying the database.
+If beds are available, updates the bed count in the database and displays a confirmation message.
+If no beds are available, notifies the user.
+Exit Process:
+
+Allows the user to exit the application gracefully, displaying a "Good Luck" message before terminating the program.
+Conclusion:
+This Hostel Management System provides a simple yet functional interface for managing bed reservations in a hostel. It demonstrates the use of C++ for database interaction and user input handling, making it a useful tool for small-scale hostel management operations.
